@@ -28,7 +28,7 @@ app.use(passport.session());
 
 const callbackURL =
   process.env.NODE_ENV === "production"
-    ? ""
+    ? "https://nodejs-authentication-s7jn.onrender.com/"
     : "http://localhost:5500/auth/google/callback";
 passport.use(
 	new GoogleStrategy(
