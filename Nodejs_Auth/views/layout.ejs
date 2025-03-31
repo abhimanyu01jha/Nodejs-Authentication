@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node Authentication</title>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <style>
+        header {
+            background: linear-gradient(to right, #1e3c72, #2a5298);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 1.5rem;
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        body {
+            font-family: "Poppins", sans-serif;
+            background-color: #f4f6f9;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        main {
+            padding: 20px;
+            max-width: 600px;
+            margin: 40px auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        button {
+            background: #2a5298;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            margin: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: 0.3s ease;
+        }
+
+        button:hover {
+            background: #1e3c72;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Node Authentication</h1>
+    </header>
+    <main>
+        <!-- This is where content from other pages will be injected -->
+        <%- body %>
+    </main>
+</body>
+</html>

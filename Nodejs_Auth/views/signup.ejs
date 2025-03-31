@@ -1,0 +1,104 @@
+
+<section>
+    <h1>Sign Up</h1>
+    <% if (message) { %>
+        <p><%= message %></p>
+    <% } %>
+    <form action="/user/signup" method="post">
+        <input type="text" name="username" placeholder="username" autocomplete="off" required><br>
+        <input type="email" name="email" placeholder="Email" autocomplete="off" required><br>
+        <input type="password" name="password" placeholder="Password" autocomplete="off" required><br><br>
+        <input type="password" name="cpassword" placeholder="Confirm Password" autocomplete="off" required><br><br>
+        <div class="g-recaptcha" data-sitekey="6LcmRHQpAAAAAKox1CmxwgV0Cbh03cU1MTc4si2g"></div>
+        <button type="submit">Sign Up</button>
+    </form>
+    <br>
+    <!-- Sign-up Google Auth -->
+    <a href="/auth/google">Sign In with Google</a>
+
+    <p>Already have an account? <a href="/user/signin">Sign in</a></p>
+    <!-- Link to sign-in page -->
+
+</section>
+
+<style>
+    /* Section Styling */
+    section {
+        width: 100%;
+        max-width: 400px;
+        margin: 50px auto;
+        padding: 30px;
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        font-family: "Poppins", sans-serif;
+    }
+
+    /* Input Fields */
+    input {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 1rem;
+    }
+
+    /* Buttons */
+    button {
+        width: 100%;
+        background: #28a745;
+        color: white;
+        border: none;
+        padding: 12px;
+        margin-top: 10px;
+        border-radius: 5px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: 0.3s ease;
+    }
+
+    button:hover {
+        background: #218838;
+    }
+
+    /* Google Auth Button */
+    .google-btn {
+        display: block;
+        background: #db4437;
+        color: white;
+        padding: 10px;
+        margin-top: 10px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-size: 1rem;
+    }
+
+    .google-btn:hover {
+        background: #c1351d;
+    }
+
+    /* Links */
+    p a {
+        color: #28a745;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    p a:hover {
+        text-decoration: underline;
+    }
+
+    /* Error/Message Styling */
+    .message {
+        color: red;
+        font-size: 0.9rem;
+        margin-bottom: 10px;
+    }
+
+    /* Captcha Styling */
+    .captcha {
+        margin: 15px 0;
+    }
+</style>
